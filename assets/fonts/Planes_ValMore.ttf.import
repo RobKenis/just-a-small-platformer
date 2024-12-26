@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c7ou4jr5vmrwr"
-path="res://.godot/imported/Planes_ValMore.ttf-e04e7eabf605445e0d041d4c8f9961d4.fontdata"
+path="res://.godot/imported/Planes_ValMore.ttf-43fa34755df1877d1d499aae646e77ad.fontdata"
 
 [deps]
 
-source_file="res://assets/Font/Planes_ValMore.ttf"
-dest_files=["res://.godot/imported/Planes_ValMore.ttf-e04e7eabf605445e0d041d4c8f9961d4.fontdata"]
+source_file="res://assets/fonts/Planes_ValMore.ttf"
+dest_files=["res://.godot/imported/Planes_ValMore.ttf-43fa34755df1877d1d499aae646e77ad.fontdata"]
 
 [params]
 
