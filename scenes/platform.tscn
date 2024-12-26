@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cad8fwr08r2nk"]
+
+[ext_resource type="Texture2D" uid="uid://ctjmldsaqv5sf" path="res://assets/tileset/four_seasons/midground_/autumn_.png" id="1_2ysfj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uad7"]
+size = Vector2(32, 9)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2ysfj")
+region_enabled = true
+region_rect = Rect2(47.9211, 246.883, 31.9888, 9.03601)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3uad7")
+one_way_collision = true
