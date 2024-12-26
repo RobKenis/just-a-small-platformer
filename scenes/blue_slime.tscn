@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://clfayltioemkx"]
+[gd_scene load_steps=14 format=3 uid="uid://clfayltioemkx"]
 
 [ext_resource type="Texture2D" uid="uid://dww83xsf48xhw" path="res://assets/sprites/4_Blue_slime/Slime2_Walk_body.png" id="1_n3333"]
 [ext_resource type="Script" path="res://scripts/blue_slime.gd" id="1_sktug"]
+[ext_resource type="PackedScene" uid="uid://cpeu5efy8v5dl" path="res://scenes/killzone.tscn" id="3_hspug"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ry7b"]
 atlas = ExtResource("1_n3333")
@@ -67,16 +68,25 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_tahvv"]
+radius = 6.0
+
 [node name="BlueSlime" type="Node2D"]
 script = ExtResource("1_sktug")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_41yw7")
 autoplay = "default"
-frame_progress = 0.250683
+frame_progress = 0.106228
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 target_position = Vector2(17, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-12, 0)
+
+[node name="Killzone" parent="." instance=ExtResource("3_hspug")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_tahvv")

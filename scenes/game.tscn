@@ -1179,6 +1179,21 @@ texture = ExtResource("9_w8kbq")
 sources/0 = SubResource("TileSetAtlasSource_08p26")
 sources/1 = SubResource("TileSetAtlasSource_625x2")
 
+[sub_resource type="Animation" id="Animation_gbrf7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(123, -26)]
+}
+
 [sub_resource type="Animation" id="Animation_5mxwa"]
 resource_name = "move"
 loop_mode = 2
@@ -1193,21 +1208,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(123, -26), Vector2(193, -26)]
-}
-
-[sub_resource type="Animation" id="Animation_gbrf7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(123, -26)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2fyoy"]
@@ -1271,5 +1271,7 @@ position = Vector2(376, -41)
 [node name="Coin5" parent="Coins" instance=ExtResource("10_n5bb8")]
 position = Vector2(440, 56)
 
-[node name="BlueSlime" parent="Coins" instance=ExtResource("14_1yjgq")]
+[node name="Enemies" type="Node" parent="."]
+
+[node name="BlueSlime" parent="Enemies" instance=ExtResource("14_1yjgq")]
 position = Vector2(237, 40)

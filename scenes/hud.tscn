@@ -7,7 +7,6 @@
 script = ExtResource("1_525qp")
 
 [node name="Score" type="Label" parent="."]
-anchors_preset = -1
 offset_left = 14.0
 offset_top = 18.0
 offset_right = 224.0
