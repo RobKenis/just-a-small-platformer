@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://c4wvnmyo2g258"]
+[gd_scene load_steps=23 format=4 uid="uid://c4wvnmyo2g258"]
 
 [ext_resource type="PackedScene" uid="uid://dqkgfs5ilscml" path="res://scenes/player.tscn" id="1_ngf7h"]
 [ext_resource type="Texture2D" uid="uid://dqjlktxi72l8y" path="res://assets/tileset/four_seasons/midground_/spring_.png" id="2_a4f1b"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ctjmldsaqv5sf" path="res://assets/tileset/four_seasons/midground_/autumn_.png" id="6_shpp7"]
 [ext_resource type="Texture2D" uid="uid://ciyc5hiqcj8lo" path="res://assets/tileset/four_seasons/foreground_/foreground_.png" id="7_0o4i1"]
 [ext_resource type="Texture2D" uid="uid://bnvesjyn7enx5" path="res://assets/tileset/four_seasons/objects_/staticObjects_.png" id="9_w8kbq"]
+[ext_resource type="PackedScene" uid="uid://cpk7y5axiw8sd" path="res://scenes/coin.tscn" id="10_n5bb8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nm8su"]
 texture = ExtResource("2_owuq2")
@@ -1190,3 +1191,8 @@ position = Vector2(18, 0)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("10_n5bb8")]
+position = Vector2(72, -33)
